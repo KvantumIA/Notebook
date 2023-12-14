@@ -5,6 +5,7 @@ from data import Asking
 class Start:
     def __init__(self):
         self.controller = Asking()
+
     def start(self):
         print()
         print("Выберите пункт меню:\n"
@@ -15,7 +16,8 @@ class Start:
               "5. Прочитать заметку.\n"
               "6. Удалить заметку.\n"
               "7. Отсортировать по дате изменения. \n"
-              "8. Выход.")
+              "8. Отсортировать по дате создания.\n"
+              "9. Выход.")
         num = int(input("Ввод: "))
         print()
 
@@ -40,7 +42,11 @@ class Start:
             self.stop()
         elif num == 7:
             self.controller.sortNoteDate()
+            self.stop()
         elif num == 8:
+            self.controller.sortNoteDateCreate()
+            self.stop()
+        elif num == 9:
             SystemExit
         else:
             print("Вы неверно ввели пункт меню. Повторите ввод.")
@@ -58,3 +64,19 @@ class Start:
         else:
             print("Вы неверно ввели пункт меню. Повторите ввод.")
             self.stop()
+
+    # def read(self):
+    #     print()
+    #     print("1. Изменить заметку.\n"
+    #           "2. Назад в меню.\n"
+    #           "3. Выход из программы.")
+    #     num = int(input("Ввод: "))
+    #     if num == 1:
+    #         self.start()
+    #     elif num == 2:
+    #         self.start()
+    #     elif num == 3:
+    #         SystemExit
+    #     else:
+    #         print("Вы неверно ввели пункт меню. Повторите ввод.")
+    #         self.stop()
