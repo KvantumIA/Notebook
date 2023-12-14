@@ -64,19 +64,3 @@ class Start:
         else:
             print("Вы неверно ввели пункт меню. Повторите ввод.")
             self.stop()
-
-    # def read(self):
-    #     print()
-    #     print("1. Изменить заметку.\n"
-    #           "2. Назад в меню.\n"
-    #           "3. Выход из программы.")
-    #     num = int(input("Ввод: "))
-    #     if num == 1:
-    #         self.start()
-    #     elif num == 2:
-    #         self.start()
-    #     elif num == 3:
-    #         SystemExit
-    #     else:
-    #         print("Вы неверно ввели пункт меню. Повторите ввод.")
-    #         self.stop()
